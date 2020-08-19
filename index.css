@@ -26,8 +26,8 @@
     --Grayish-Blue: hsl(229, 7%, 55%);
     --Dark-Blue: hsl(228, 56%, 26%);
     --Very-Dark-Blue: hsl(229, 57%, 11%);
-    --radius:.4rem;
-    --radius-section:.2rem;
+    --radius: .4rem;
+    --radius-section: .2rem;
 }
 
 @media screen and (min-width:800px) {
@@ -52,17 +52,18 @@ body {
 }
 
 main {
-  
+
     color: var(--clr-light);
-    margin-top:3rem;
+    margin-top: 3rem;
     margin-bottom: 3rem;
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:800px) {
     main {
         display: flex;
         justify-content: center;
-        margin-top:8rem;
+        margin-top: 8rem;
+        align-items: flex-start;
     }
 }
 
@@ -86,70 +87,94 @@ h4 {
 }
 
 .section {
-    margin:0 1rem 1rem 1rem;
+    margin: 0 1rem 1rem 1rem;
     padding: 1.5rem 1.5rem;
     background-color: var(--Dark-Green-Blue-);
 }
 
-.section-one{
+.section-one {
     border-top-left-radius: .2rem;
     border-top-right-radius: 3.5rem;
-    border-bottom-left-radius:.2rem;
+    border-bottom-left-radius: .2rem;
 }
-.section-one-actions{
-    margin-top:1rem;
-    display:flex;
+
+
+.section-one-actions {
+    margin-top: 1rem;
+    display: flex;
 }
+
+.section-two-heading {
+    text-align: center;
+    margin-bottom: .5em;
+}
+
 .section-one-actions img {
-    padding:.7rem;
-    background-color:var(--Very-Dark-Blue);
+    padding: .7rem;
+    background-color: var(--Very-Dark-Blue);
     cursor: pointer;
     border-radius: var(--radius-);
 }
+.section-two-inner{
+    padding-bottom: 2px;
+}
 
-.action + .action {
+.action+.action {
     margin-left: 1rem;
 }
-.pop-up{
-    color: #000000;
-}
 
-.total{
-    padding:.3rem;
+
+.total {
+    padding: .3rem;
     background-color: var(--Very-Dark-Blue);
+    display:flex;
 }
 
 .used {
- padding-left: 2rem;
- background-color: var(--Gradient);
- width:85%;
+    padding: inherit;
+    background-color: var(--Gradient);
+    width: 78%;
 }
 
-.pop-up{
-    padding:1rem;
+.dot{
+    background-color:var(--clr-light);
+    width:2%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
+}
+
+.pop-up {
+    color: #000000;
+    padding: .5rem;
+    font-size:1rem;
     background-color: var(--clr-light);
-    width:150px;
+    width: 150px;
     text-align: center;
     position: relative;
-    top:50px;
-    left:50px;
+    bottom:-100px;
+    left: 70px;
     z-index: 2;
-    
+    margin:0px;
+
+}
+
+.amount-range{
+    display:flex;
+    justify-content: space-between;
 }
 
 @media screen and (min-width:800px) {
-    .container {
-        background-color: var(--Dark-Blue);
-        padding: 3em;
-        margin: 120px 70px 0px 70px;
-    }
-    .section-two{
+
+    .section-two {
         width: 40%;
         padding-bottom: 0;
+        align-self: flex-end;
     }
-    .pop-up{
-        top: -80%;
-        left: 70%;
+
+    .pop-up {
+       top:-50px;
+       left:65%;
     }
-    
+
 }
